@@ -5,7 +5,7 @@ import Home from "./Main/Home/Home";
 import Gallery from "./Main/Gallery/Gallery";
 import Contact from "./Main/Contact/Contact";
 import { BrowserRouter } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Carousel from "./Main/Carousel/Carousel";
 
 export class App extends Component {
@@ -17,10 +17,12 @@ export class App extends Component {
             <Navbar />
           </header>
           <main className={classes.mainContent}>
-            <Route path="/" exact component={Home} />
-            <Route path="/gallery" exact component={Gallery} />
-            <Route path="/contact" exact component={Contact} />
-            <Route path="/view/:id" component={Carousel} />
+            <Switch>
+              <Route path="/gallery" exact component={Gallery} />
+              <Route path="/contact" exact component={Contact} />
+              <Route path="/view/:id" exact component={Carousel} />
+              <Route path="/" component={Home} />
+            </Switch>
           </main>
         </div>
       </BrowserRouter>

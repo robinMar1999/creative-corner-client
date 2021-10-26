@@ -11,17 +11,22 @@ export class Gallery extends Component {
     uploading: false,
     addedDesign: false,
     designs: [],
+    loading: true,
   };
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/api/design")
+      .get("/design")
       .then((res) => {
         this.setState({
           designs: res.data,
+          loading: false,
         });
       })
       .catch((err) => {
+        this.setState({
+          loading: false,
+        });
         console.log(err);
       });
   }
@@ -101,7 +106,18 @@ export class Gallery extends Component {
           selected={this.state.selected}
           uploading={this.state.uploading}
         />
-        <Thumbnails designs={this.state.designs} />
+        {this.state.loading ? (
+          <div className={classes.Loading}>
+            <div className={classes.ldsRing}>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        ) : (
+          <Thumbnails designs={this.state.designs} />
+        )}
       </div>
     );
   }

@@ -23,7 +23,7 @@ export default class Carousel extends Component {
   };
   componentDidMount() {
     axios
-      .get(`http://localhost:5000/api/design/${this.props.match.params.id}`)
+      .get(`/design/${this.props.match.params.id}`)
       .then((res) => {
         console.log(res.data);
         settings = {
