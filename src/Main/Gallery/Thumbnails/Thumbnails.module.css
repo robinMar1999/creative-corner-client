@@ -1,0 +1,8 @@
+.Thumbnails {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

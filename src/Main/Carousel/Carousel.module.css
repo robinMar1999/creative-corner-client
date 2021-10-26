@@ -1,0 +1,83 @@
+.Carousel {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 9vh;
+  height: 60vh;
+  /* border: 1px solid black; */
+}
+
+.Button {
+  width: 100%;
+}
+
+.Button a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(83, 146, 204);
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.Image {
+  height: 70vh;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.Image img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  border: 1px solid rgb(214, 211, 211);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  max-width: 97%;
+  /* object-fit: cover; */
+}
+
+.Thumb img {
+  width: 100%;
+}
+
+.Loading {
+  font-size: 1rem;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ldsRing {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.ldsRing div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 8em;
+  height: 8em;
+  margin: 8px;
+  border: 8px solid rgb(12, 12, 12);
+  border-radius: 50%;
+  animation: ldsRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--NavBgColor) transparent transparent transparent;
+}
+.ldsRing div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.ldsRing div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.ldsRing div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes ldsRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

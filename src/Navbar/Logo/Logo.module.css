@@ -1,0 +1,9 @@
+.Logo {
+  color: var(--NavItemColor);
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}
+
+.Logo:hover {
+  cursor: pointer;
+}

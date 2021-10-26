@@ -1,0 +1,28 @@
+.Uploading {
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(133, 131, 131, 0.589);
+  backdrop-filter: blur(1px);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(240, 230, 138);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 1rem;
+}
+
+.Content {
+  width: 55%;
+  text-align: right;
+}
+
+.Dots {
+  width: 45%;
+  text-align: left;
+}
